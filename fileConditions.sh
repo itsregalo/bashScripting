@@ -1,6 +1,6 @@
 #! /bin/bash
 
-FILE="retech.txt"
+FILE="readme.md"
 
 if [ -f "$FILE" ]
 then
