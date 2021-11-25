@@ -13,3 +13,7 @@ echo "${results[2]}"
 
 results+=(99)
 echo ${results[@]}
+
+#changing an element
+results[4]=NILL
+echo ${results[@]}
