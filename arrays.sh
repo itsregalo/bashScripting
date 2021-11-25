@@ -1,5 +1,10 @@
-#! /bin/bash/
+#! /bin/bash
 
 results=(60 70 80 90 100)
 
-echo "$results[@]"
+# display the entire array
+echo "The entire array"
+echo "${results[@]}"
+
+echo "access an index"
+echo "${results[2]}"
