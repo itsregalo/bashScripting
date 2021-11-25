@@ -8,3 +8,8 @@ echo "${results[@]}"
 
 echo "access an index"
 echo "${results[2]}"
+
+#add item to the array
+
+results+=(99)
+echo ${results[@]}
