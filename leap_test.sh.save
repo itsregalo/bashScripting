@@ -1,0 +1,23 @@
+#! /bin/bash
+
+echo -n "Enter year (YYYY): "
+read year
+
+if [ $year -gt 2000 ]
+then
+    if [ $(($year%4)) -eq 0 ]
+    then
+        echo "$year is a Leap year"
+    else
+        echo "$year is Not a leap year"
+    fi
+
+else
+    if [ $(($year%400)) -eq 0 ]
+    then
+        echo "$year is aLeap year"
+
+    # all other years are not leap years
+    else
+        echo "$year is Not a leap year"
+fi

@@ -3,26 +3,26 @@
 echo -n "Enter year (YYYY): "
 read year
 
-a="expr $year"%400
-b="expr $year"%100
-c="expr $year"%4
-
-# leap year is perfectly divisible by 400
-if [ "$a" -eq 0 ]
+if [ $year -gt 2000 ]
 then
-    echo "Leap year"
-
-# not a leap year if divisible by 100 but not divisible by 400
-elif [ "$b" -eq 0 ]
-then
-    echo "Not a leap year"
-
-# leap year if not divisible by 100 but divisible by 4
-elif [ "$c" -eq 0 ]
-then
-    echo "Leap year"
-
- # all other years are not leap years
+    if [ $(($year%4)) -eq 0 ]
+    then
+        echo "$year is a Leap year"
+    else
+        echo "$year is Not a leap year"
+    fi
 else
-    echo "Not a leap year"
+    if [ $(($year%400)) -eq 0 ]
+    then
+        echo "$year is a Leap year"
+    else
+        echo "$year is not a leap year"
+    fi
 fi
+
+#logic
+
+#To check if a year is a leap year, divide the year by 4.
+#If it is fully divisible by 4, it is a leap year
+#However, Century years like 300, 700, 1900, 2000 need to be
+#divided by 400 to check whether they are leap years or not.
