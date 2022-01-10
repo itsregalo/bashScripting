@@ -4,8 +4,9 @@
 # Date Created: 10-Jan-2021
 # Last Modified: 10-Jan-2021
 # Description: Code to backup my files
+current=$(pwd)
 
-tar -cvf ~/home/dev/shellScripting/projs/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ~/* 2>/dev/null
+tar -c $current/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ~/* 2>/dev/null
 
 exit 0
 
