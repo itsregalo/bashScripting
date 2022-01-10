@@ -22,3 +22,12 @@
 * HOSTTYPE - Contains the type of processor architecture the comp is running
 
 * PS1 - Contains the prompt string shown in the terminal before each command
+
+
+### Variable tricks
+
+* ${name,,} - returns all in lowercase
+* ${name^^} - returns all in uppercase
+
+* ${#name} - returns the length of the variable
+* ${parameter:offset:length}
