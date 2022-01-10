@@ -5,6 +5,7 @@
 # Last Modified: 10-Jan-2021
 # Description: Code to backup my files
 
-tar -cvf ~/bash_course/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ~/* 2>/dev/null
+tar -cvf ~/home/dev/shellScripting/projs/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ~/* 2>/dev/null
 
 exit 0
+
