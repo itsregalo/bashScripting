@@ -6,7 +6,10 @@
 # Description: Code to backup my files
 current=$(pwd)
 
-tar -c $current/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ~/* 2>/dev/null
+tar -cf "$current/my_backup_$(date +%d-%m-%Y_%H-%M-%S).tar" $HOME 2>/dev/null
+
+echo "successfully created a backup"
+
 
 exit 0
 
